@@ -9,7 +9,11 @@ let numeroUsuario;
 // codigo
 do {
     numeroUsuario = parseInt(prompt("¿Por favor ingrese un numero entre 1 y 100?"));
-    if (numeroUsuario === numeroRandom) {
+    // le primero if valida si es numero
+    if (isNaN(numeroUsuario) && numeroUsuario !== null && numeroUsuario !== "" ){
+        alert('Lo que ingresaste no es un numero, por favor recorda que son numeros del 1 al 100')
+    }
+    else if (numeroUsuario === numeroRandom) {
         alert(`Ganaste Felicidades!!!! el numero random elegido por la maquina era el ${numeroUsuario}`)
     } else {
         if (numeroUsuario < numeroRandom) {
